@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Essay Writing </title>
+    <script src="./js/jquery.js"></script>
+    <script>
+       $(document).ready(function(){
+            var i;
+         //for(i=1;i<=1000;i++)
+            $("#hdng").fadeOut(500).fadeIn(500);
+        var maxlength = $("#title").attr("maxlength");
+        $("#title").keyup(function(){
+            var textlen = maxlength - $("#title").val().length;
+            $("#rchar").text(textlen + ' ' + "remaining character...")
+        });
+        var maxlen = $("#content").attr("maxlength");
+        $("#content").keyup(function(){
+            var conlen = maxlen - $("#content").val().length;
+            $("#echar").text(conlen + ' ' + "remaining character...")
+        });
+       });
+    </script>
+</head>
+<body>
+    <table align="center" cellsapcing="10" cellpadding="10">
+        <tr>
+            <td>
+                <h1 id="hdng">Essay Writing</h1>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                Enter Essay Title ( Max length 25 character):-
+            </td>
+        </tr>
+       <tr>
+           <td>
+               <input type="text" id="title" maxlength="25">
+               <br>
+               <span id="rchar">  </span>
+           </td>
+       </tr>
+       <tr>
+           <td>
+               Enter Essay Content( Max length 1000 character) :-
+           </td>
+       </tr>
+       <tr>
+         <td>
+            <textarea type="text" id="content" maxlength="1000" cols="50" rows="25"> </textarea>
+            <br>
+            <span id="echar">  </span>
+         </td>
+       </tr>
+      <tr>
+         <td align="center">
+            <button type="submit" >Submit</button>
+         </td>
+      </tr>
+  </table>
+</body>
+</html>

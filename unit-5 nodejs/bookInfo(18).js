@@ -1,0 +1,20 @@
+var http = require('http');
+var url = require('url');
+var querystring = require('querystring');
+http.createServer((request,response) =>{
+    response.write(`<b>  </b>`);
+    var qs = url.parse(request.url).query;
+    console.log(qs);
+    var q = querystring.parse(qs);
+    console.log(q);
+    response.write(`<table border=3 cellpadding=7 background-color=red><caption><h2>Book Details </h2></caption>`);
+    response.write(`<tr><td> Book Name </td> <td>${q.name}</td></tr>`);
+    response.write(`<tr><td> Book no </td> <td>${q.no}</td></tr>`);
+    response.write(`<tr><td> Author name </td> <td>${q.author}</td></tr>`);
+    response.write(`<tr><td> Book Price</td> <td>${q.price}</td></tr>`);
+    response.write(`<tr><td> Book pages </td> <td>${q.pages}</td></tr>`);
+    response.write(`<tr><td> Book Publication Year </td> <td>${q.pyear}</td></tr>`);
+    response.write(`<tr><td> Language </td> <td>${q.lan}</td></tr>`);
+    response.write(`</table>`);
+}).listen(8080);
+console.log('server running at http://127.0.5.9.8080/');  

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drop Down Menu</title>
+    <script src="./js/jquery.js"></script>
+    <script>
+        var x = `{
+                "1":"jan",
+                "2":"feb",
+                "3":"march",
+                "4":"april",
+                "5":"may",
+                "6":"june",
+                "7":"july",
+                "8":"aug",
+                "9":"sep",
+                "10":"oct",
+                "11":"nov",
+                "12":"dec"
+             }`;
+             var obj = JSON.parse(x);
+             var mon = "<option selected disabled>-----Select------</option>";
+             for(let key in obj)
+             {
+                    mon = mon + `<option>${obj[key]}</option>`;
+             }
+             $(document).ready(function(){
+                 $("#m").append(mon);
+             })
+    </script>
+</head>
+<body>
+    <form  method="post">
+        select birth month :-
+        <select id="m"></select>
+    </form>
+</body>
+</html>

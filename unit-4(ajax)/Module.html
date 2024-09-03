@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <!--link rel="stylesheet" href="./bootstrap-4.3.1-dist/css/bootstrap.min.css"-->
+    <title>Payment Module</title>
+    <script src="js/jquery.js"></script>
+    <script>
+        $(document).ready(function() {
+           $("#address").hide();
+            $("#pmod").hide();
+            $("#cod").hide();
+            $("#nab").hide();
+            $("#card").hide();
+            var xhr = new XMLHttpRequest();
+            xhr.open("get", "Product.json", true);
+            xhr.send();
+            var prd = "";
+            var op = "";
+            xhr.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200)
+                    prd = JSON.parse(this.responseText)
+                    // alert(prd);
+                for (var name in prd) {
+                    op = op + `<option value=${prd[name]}> ${name} - ${prd[name]}</option>`;
+
+                }
+                $("#pname").html(op);
+            };
+            $("#qty").change(function() {
+                var cost = $("#pname").val() * $("#qty").val();
+                $("#cost").val(cost);
+            });
+            $("#chk1").click(function() {
+                $("#next1").removeAttr("disabled");
+            });
+            $("#next1").click(function() {
+                $("#address").show();
+            });
+            $("#chk2").click(function() {
+                $("#next2").removeAttr("disabled");
+            });
+            $("#next2").click(function() {
+                $("#pmod").show();
+            });
+            $("#pm1").click(function() {
+                $("#cod").show();
+                $("#nab").hide();
+                $("#card").hide();
+            });
+            $("#pm2").click(function() {
+                $("#nab").show();
+                $("#card").hide();
+                $("#cod").hide();
+            });
+            $("#pm3").click(function() {
+                $("#card").show();
+                $("#nab").hide();
+                $("#cod").hide();
+            });
+            var txt = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFJHIJKLMNOPQRSTUVWXYZ";
+            captcha = "";
+            for(var i=1;i<=6;i++)
+            {
+                captcha = captcha + txt.charAt(Math.floor(Math.random()*63));
+            }
+            $("#cb").text(captcha);
+            $("#re").click(function(){
+                location.reload(true);
+            });
+            $("#bt").click(function(){
+                var val1 = $("#inp").val();
+                if(captcha == val1)
+                {
+                    alert("Valid Captcha Good!!!!");
+                }
+                else
+                {
+                    alert("Invalid Captcha Please Enter Again!!!");
+                }
+            });
+        });
+      
+      
+    </script>
+</head>
+
+<body>
+    <div id="ord">
+        <fieldset>
+            <legend>Order Details</legend>
+            <table>
+                <tr>
+                    <td>
+                        Select Product :-
+                        <select name="pname" id="pname"></select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Select Quantity :-
+                        <input type="number" min="1" max="50" id="qty" value="0">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Total Cost :-
+                        <input type="text" id="cost" readonly>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="checkbox" id="chk1"> Buy It.
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="center">
+                        <button type="submit" id="next1" disabled> Next </button>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </div>
+    <div id="address">
+        <fieldset>
+            <legend>Shipping Details</legend>
+            <tr>
+                <td>
+                    Enter Your Name :-
+                </td>
+                <td>
+                    <input type="text" id="name">
+                </td>
+            </tr>
+            <br> <br>
+            <tr>
+                <td>
+                    Enter Contact No :-
+                </td>
+                <td>
+                    <input type="text" id="name">
+                </td>
+            </tr>
+            <br> <br>
+            <tr>
+                <td>
+                    Enter Your Email :-
+                </td>
+                <td>
+                    <input type="text" id="name">
+                </td>
+            </tr>
+            <br> <br>
+            <tr>
+                <td>
+                    Enter Your Address :-
+                </td>
+                <td>
+                    <textarea name="add" id="add" cols="20" rows="6"></textarea>
+                </td>
+            </tr>
+            <br><br>
+            <tr>
+                <td>
+                    <input type="checkbox" id="chk2"> Buy it
+                </td>
+            </tr>
+            <br><br>
+            <tr>
+                <td colspan="2" align="center">
+                    <button type="submit" id="next2" disabled>Next</button>
+                </td>
+            </tr>
+        </fieldset>
+    </div>
+    <div id="pmod">
+        <fieldset>
+            <legend>Payment Mode</legend>
+            <tr>
+                <td>
+                    <input type="radio" id="pm1" name="pay"> Cash On Delivery
+                </td>
+                <td>
+                    <input type="radio" id="pm2" name="pay"> Net Banking
+                </td>
+                <td>
+                    <input type="radio" id="pm3" name="pay"> Card
+                </td>
+            </tr>
+        </fieldset>
+    </div>
+    <div id="cod">
+        <form action="">
+        <h1> cash on Delivery</h1>
+        <div id="mid">
+            <tr>
+                <td>
+                     <input type="text" placeholder="Enter Your Captcha Here" id="inp" autocomplete="off">
+                 </td>
+                 <td>
+                    <button id="bt"> Submit </button>
+                 </td>
+           </tr>
+           <br>
+            <span id="re"><i class="fa fa-undo"></i></span>
+            </form>
+            <div id="cb"></div>
+        
+    </div>
+    </div>
+    <div id="nab">
+        <h1>net Banking</h1>
+
+    </div>
+    <div id="card">
+        <form action="">
+        <h1>Card Payment</h1>
+        <tr>
+            <label for="cc-name" > Card Holder's Name </label>
+        </tr>
+        <br>
+         <tr>
+             <input type="text" id="cc-name" class="input-lg" autocomplete="cc-name" placeholder="Enter Your name..." require>
+        </tr>
+     <br>
+            <tr>
+                <label for="cc-number" > Card Number </label>
+            </tr>
+            <br>
+             <tr>
+                 <input type="tel" id="cc-number" class="input-lg" autocomplete="cc-number" placeholder=".... .... ...."require >
+            </tr>
+            <br>
+            <tr>
+            <td>
+                <label for="cc-date" > Card Expiry </label>
+            </td>
+            <br>
+            <td>
+                 <input type="date" id="cc-date" class="input-lg" autocomplete="cc-date" placeholder="12/9/2002" require>
+            </td>
+            <br>
+            <td>
+                <label for="cvc-number" > Card CVC </label>
+            </td>
+            <br>
+             <td>
+                 <input type="number" id="cvc-number" class="input-lg" autocomplete="cvc-number" placeholder="..." require>
+            </td>
+          </tr>
+          <br>
+          <tr>
+              <td>
+                <label for="cc-amt" > Total Amount </label>
+              </td>  
+          <br>
+              <td>
+                  <input type="number" id="cc-amt" class="input-lg" autocomplete="cc-amt" placeholder="$6789" require>
+              </td>
+          <br>
+          </tr>
+          <br>
+          <br>
+          <button type="submit" id="btn" colspan="2">Submit</button>
+        </form>
+    </div>
+</body>
+
+</html>

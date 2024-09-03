@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+
+<favouriateAlbum>
+    <title> Party Songs </title>
+    <singer> Yo Yo Honey Singh </singer>
+    <year> 2010 </year>
+    <description> Top Party Songs </description>
+    <songList> 
+        <songTitle> Makhana </songTitle>
+        <songTitle> Kanta Laga </songTitle>
+        <songTitle> Blue Eyes </songTitle>
+        <songTitle> Love Dose </songTitle>
+        <songTitle> Dil Chori </songTitle>
+    </songList>
+</favouriateAlbum>

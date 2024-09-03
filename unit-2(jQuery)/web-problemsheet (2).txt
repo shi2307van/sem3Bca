@@ -1,0 +1,305 @@
+
+
+1.
+=
+<studentList>
+    <student isSpecial ="yes">
+        <firstName> Shivani </firstName>
+        <lastName> Shinde </lastName>
+        <rolllno> 58 </rolllno>
+        <GRNO> 6E1808 </GRNO>
+        <email> shivanishinde540@gmail.com</email>
+        <address> 119, Priyanka Green Park Bhestan Surat</address>
+        <contactNo> 98988615552</contactNo>
+    </student>
+         <firstName> Puja </firstName>
+        <lastName> Patel </lastName>
+        <rolllno> 88 </rolllno>
+        <GRNO> 6E1804 </GRNO>
+        <email> puja540@gmail.com</email>
+        <address> 234,Pandesara Surat</address>
+        <contactNo> 90988615556</contactNo>
+     <student isSpecial ="no">
+         <firstName> Samarth </firstName>
+        <lastName> Pawar </lastName>
+        <rolllno> 12 </rolllno>
+        <GRNO> 6E1888 </GRNO>
+        <email> samarth345@gmail.com</email>
+        <address> athavaline, Surat</address>
+        <contactNo> 98989615552</contactNo>
+    </student>
+     <student isSpecial ="yes">
+         <firstName> Nisha </firstName>
+        <lastName> Ray </lastName>
+        <rolllno> 56 </rolllno>
+        <GRNO> 6E1958 </GRNO>
+        <email> nisharay@gmail.com</email>
+        <address> 234 majuragate ,Surat</address>
+        <contactNo> 98988645552</contactNo>
+    </student>
+     <student isSpecial ="no">
+         <firstName> Kartik </firstName>
+        <lastName> Thakur </lastName>
+        <rolllno> 88 </rolllno>
+        <GRNO> 6E1508 </GRNO>
+        <email> kartik@gmail.com</email>
+        <address> Udhana, Surat</address>
+        <contactNo> 98938615552</contactNo>
+    </student>
+     <student isSpecial ="yes">
+         <firstName> Darshan </firstName>
+        <lastName> Mansik </lastName>
+        <rolllno> 18 </rolllno>
+        <GRNO> 6E1608 </GRNO>
+        <email> dharshan@gmail.com</email>
+        <address> bhestan, Surat</address>
+        <contactNo> 92988615552</contactNo>
+    </student>
+</studentList>
+
+2.
+==
+<?xml version="1.0"?>
+
+<foodItems>
+    <italian>
+        <food>
+            <name> Pizza </name>
+            <price> 300 </price>
+        </food>
+        <food>
+            <name> pasta </name>
+            <price> 200 </price>
+        </food>
+        <food>
+            <name> French Frize </name>
+            <price> 100 </price>
+        </food>
+    </italian>
+    <southIndian>
+        <food>
+            <name> Dosa </name>
+            <price> 50 </price>
+        </food>
+         <food>
+            <name> Idaly </name>
+            <price> 90 </price>
+        </food>
+         <food>
+            <name> Uthapa </name>
+            <price> 70 </price>
+        </food>
+    </southIndian>
+    <gujarati>
+         <food>
+            <name> Khaman </name>
+            <price> 250 </price>
+        </food>
+         <food>
+            <name> Jalebi </name>
+            <price> 350 </price>
+        </food>
+         <food>
+            <name> Dhokala </name>
+            <price> 150 </price>
+        </food>
+    </gujarati>
+</foodItems>
+3.
+==
+<subjectList>
+    <semester1>
+        <name code="101">Cmmunication Skill</name>
+        <name code="102">Mathematics</name>
+        <name code="103"> Introduction To Computer</name>
+        <name code="104"> Computer Programming  And Prgramming Methodology </name>
+        <name code="105"> Data Manipulation And Analysis </name>
+        <name code="106"> Pacticals </name>
+    </semester1>
+    <semester2>
+        <name code="201"> Relational Database Mangement System </name>
+        <name code="202">Internet And Html</name>
+        <name code="203"> Programming Skills</name>
+        <name code="204">Operating System-1</name>
+        <name code="205"> Emerging Trend</name>
+        <name code="206">Pacticals</name>
+    </semester2>
+    <semester3>
+        <name code="301"> Stat</name>
+        <name code="302"> Software Engineering-1</name>
+        <name code="303">Object Oriented Programming And Data Structure</name>
+        <name code="304"> Database Handling Using Python</name>
+        <name code="305"> Web Design-1</name>
+        <name code="306">Pacticals</name>
+    </semester3>
+    <semester4>
+        <name code="401">Infomation System</name>
+        <name code="402">Java Programming</name>
+        <name code="403">.Net Programming</name>
+        <name code="404">Internet Of Things</name>
+        <name code="405"> Web Design-2</name>
+        <name code="406">Pacticals</name>
+    </semester4>
+   
+</subjectList>
+4.
+===
+<?xml version="1.0"?>
+
+<favouriateAlbum>
+    <title> Party Songs </title>
+    <singer> Yo Yo Honey Singh </singer>
+    <year> 2010 </year>
+    <description> Top Party Songs </description>
+    <songList> 
+        <songTitle> Makhana </songTitle>
+        <songTitle> Kanta Laga </songTitle>
+        <songTitle> Blue Eyes </songTitle>
+        <songTitle> Love Dose </songTitle>
+        <songTitle> Dil Chori </songTitle>
+    </songList>
+</favouriateAlbum>
+
+9.
+===
+[
+   
+	{
+	"sem1":7.56,
+   	"sem2":8.56,
+	"sem3":9.56,
+	"sem4":6.78,
+	"sem5":4.67,
+	"sem6":9.45
+	}
+   
+]
+10.
+===
+{
+	"1":
+	{
+		"name":"shivani",
+		"city":"surat",
+		"email":"shivani@.gmail",
+		"contact-no":9898861552
+	},
+	"2":
+	{
+		"name":"puja",
+		"city":"patel",
+		"email":"puja@.gmail",
+		"contact-no":9898861550
+	},
+	"3":
+	{
+		"name":"kajal",
+		"city":"shinde",
+		"email":"kajal@.gmail",
+		"contact-no":9898861582
+	},
+	"4":
+	{
+		"name":"nisha",
+		"city":"ray",
+		"email":"nisha@.gmail",
+		"contact-no":9898861556
+	},
+	"5":
+	{
+		"name":"heena",
+		"city":"pawar",
+		"email":"heena@.gmail",
+		"contact-no":9898861553
+	}
+}
+11.
+===
+{
+	"Car1": {
+		"BMW": [
+			"skila",
+			"tesala",
+			"oddi",
+			"farari"
+		]
+	},
+
+	"car2": {
+		"honda": [
+			"hondaamaze",
+			"hondacity",
+			"hondacivic",
+			"hondajazz"
+		]
+	},
+
+	"car3": {
+		"suzuki": [
+			"swift",
+			"baleno",
+			"desire",
+			"artica"
+		]
+	}
+}
+12.
+==
+{
+	"South Indian": {
+		"Dosa": 45,
+		"Uttapam": 40,
+		"Idaly": 50
+	},
+
+	"Italian": {
+		"Pasta": 70,
+		"Pizza": 140,
+		"Garlic Bread": 100
+	},
+	"Chinese": {
+		"Machuriyan": 80,
+		"Chinese Bhel": 220,
+		" Spring Roll": 230
+	}
+}
+13.
+==
+{
+	"semester1": 
+	{
+		"101": "Communication Skill",
+		"102": "Mathematics",
+		"103": " Introduction To Computer",
+		"104": " Computer Programming  And Prgramming Methodology ",
+		"105": " Data Manipulation And Analysis ",
+		"106": "Pacticals"
+	},
+	"semester2": 
+	{
+		"201": " Relational Database Mangement System",
+		"202": "Internet And Html",
+		"203": " Programming Skills",
+		"204": "Operating System-1",
+		"205": "Emerging Trend",
+		"206": "PacticalsPacticals"
+	},
+	"semester3":
+	 {
+		"301": "Stat",
+		"302": " Software Engineering-1",
+		"303": "Object Oriented Programming And Data Structure",
+		"304": " Database Handling Using Python",
+		"305": " Web Design-1",
+		"306": "Pacticals"
+	},
+	"semester4": 
+	{
+		"401": "Infomation System",
+		"402": "Java Programming",
+		"403": ".Net Programming",
+		"404": "Internet Of Things",
+		"405": "Web Design-2",
+		"406": "Pacticals"
+	}
+}

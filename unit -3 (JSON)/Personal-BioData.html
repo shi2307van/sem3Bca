@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bio-Data Object</title>
+    <script src="./js/jquery.js"></script>
+    <script>
+        var pbiodata = `{
+            "First Name":"Shivani",
+            "Middle Name":"Tukaram",
+            "Last Name":"Shinde",
+            "Email Id":"shivanishinde@gmail.com",
+            "Gender":"Female",
+            "DOJ":"23-07-2002",
+            "Language":"Marathi",
+            "Studying":"BCA",
+            "Phone No":9023844654,
+            "Hobby":"Drawing",
+            "Address":"119,Priyanka Grren Park Bhestan,Surat"
+        }`
+
+        var obj = JSON.parse(pbiodata)
+        var BioData =  "<caption><h1> PERSONAL BIO-DATA </h1></caption>";
+        for(let key in obj){
+            BioData= BioData + `<tr>`
+            BioData = BioData + `<td>${key}</td><td>${obj[key]}</td>`
+            BioData = BioData + `</tr>`
+        }
+        $(document).ready(function(){
+            $("#demo").html(BioData);
+            $("#demo").attr("border","10");
+            $("#demo").attr("cellspacing","20");
+            $("#demo").attr("cellpadding","10");
+            $("#demo").attr("align","center");
+            $("#demo").css({"background-color":"pink","color":"black","font-weight": "bold","font-size": "25px","border":"10px solid black","text-align":"center"});
+        });
+    </script>
+</head>
+<body>
+    <table id="demo"> </table>
+</body>
+</html>

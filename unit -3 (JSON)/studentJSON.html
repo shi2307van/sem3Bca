@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON object of student</title>
+    <script src="./js/jquery.js"></script>
+    <script>
+        var s = `{
+            "Rollno":58,
+            "Name":"shivani",
+            "Email-Id":"shivani540@gmail.com",
+            "Birth-Date":"23/07/2002",
+            "GRNO":"6E1607"
+        }`;
+        var obj = JSON.parse(s)
+        var student = "<h2> Describing Student</h2>";
+        for(let key in obj){
+            student = student + `${key} : ${obj[key]} <br> <br> `;
+        }
+        $(document).ready(function(){
+            $("#div1").css({"background-color":"red","color":"white","border":"4px solid black","text-align":"center"});
+            $("#div1").html(student);
+        });
+    </script>
+</head>
+<body>
+   <div id="div1">
+   </div> 
+</body>
+</html>

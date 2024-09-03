@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Personal Information </title>
+    <script src="./js/jquery.js"></script>
+    <style>
+        fieldset{
+            display:block;
+            margin-left: 200px;
+            margin-right: 10px;
+            border: 10px solid rgb(212, 41, 147);
+            width: 800px;
+            color: #1d4118;
+            background-color: rgb(140, 195, 226);
+            font-size: 20px;
+            font-weight: bold;
+        }
+        button{
+            width:  200px;
+            height: 50px;
+            border-radius: 20px;
+            background-color: red;
+            border: 5px solid rgb(184, 118, 118);
+            color: black;
+            font-weight: bold;
+            font-size: 20px;
+        }
+    </style>
+    <script>
+        $(document).ready(function(){
+            $("#addLang").click(function(){
+                $("#lang").show();
+            });
+            $("#newLang").blur(function(){
+                var lang = $("#newLang").val();
+                $("#langList").append("<option>" + lang + "</option>");
+                $("#lang").hide();
+            });
+        });
+    </script>
+</head>
+<body>
+    <fieldset>
+        <legend><===Personal Information===></legend>
+        <form method="post">
+            <table align="center" cellspacing="10" cellpadding="10">
+                <tr>
+                    <td> Full Name :- </td>
+                    <td>
+                        <input type="text" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td> Email Id :-</td>
+                    <td>
+                        <input type="email" required>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td> Contact No :-</td>
+                    <td>
+                        <input type="text" pattern="[6-9][0-9]{9}" title="please enter valid mobile no !!! ">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td> Gender :-</td>
+                    <td>
+                        <input type="radio" id="male" value="male" name="gender">
+                        <label for="male"> Male </label>
+                    </td>
+                    <td>
+                        <input type="radio" id="female" value="female" name="gender">
+                        <label for="female"> Female </label>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td> Address :-</td>
+                    <td>
+                        <textarea id="" cols="30" rows="10"></textarea>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>Languages :-</td>
+                    <td>
+                        <select  id="langList">
+                            <option disabled="disabled" selected="selected">---select----</option>
+                            <option>Marathi</option>
+                            <option>English</option>
+                            <option>Gujarati</option>
+                            <option>Hindi</option>
+                        </select>
+                        <a href="#" id="addLang"> ADD LANGUAGES</a>
+                    </td>
+                </tr>
+
+                <tr style="display: none;" id="lang">
+                    <td>  Add New Languages :-</td>
+                    <td>
+                        <input type="text" id="newLang">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="2" align="center">
+                        <button type="submit" value="save"> Save </button>
+                    </td>
+                </tr>
+
+            </table>
+        </form>
+    </fieldset>
+</body>
+</html>

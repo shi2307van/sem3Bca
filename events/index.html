@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Of jQuery</title>
+    <script src="./js/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            for(i=1;i<=1000;i++){
+            $("h1").fadeIn(200).fadeOut(200);
+            }
+            $("#dis").click(function(){
+                $("#f1a").slideToggle("fast");
+                $("#f1b").slideToggle("fast");
+                $("#f1c").slideToggle("fast");
+            });
+            $("#fad").click(function(){
+                $("#f2a").slideToggle("fast");
+                $("#f2b").slideToggle("fast");
+                $("#f2c").slideToggle("fast");
+                $("#f2d").slideToggle("fast");
+
+            });
+            $("#slid").click(function(){
+                $("#f3a").slideToggle("fast");
+                $("#f3b").slideToggle("fast");
+                $("#f3c").slideToggle("fast");
+            });
+        });
+    </script>
+    <style>
+        ul{
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            color:rgb(71, 47, 136);
+            margin-top: 30px;
+            margin-left: 20px;
+
+        }
+        .menu{
+            border:6px solid rgb(14, 3, 0);
+            border-radius: 20px;
+            float: left;
+            padding: 10px;
+            text-align: center;
+            width: 400px;
+            height: 60px;
+            margin-top: 100px;
+           
+        }
+        .menuItem{
+            padding:10px;
+            margin-top: 20px;
+            width: 380px;
+            height: 80px;
+            margin-left:0px;
+        }
+        .f{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 30px;
+           width: 380px;
+            height: 80px;
+            padding:0px;
+            display:none;
+        }
+        li{
+            background-color: rgb(197, 38, 38);
+           
+        }
+        a{
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 50px;
+        }
+        body{
+           background-color: rgb(57, 44, 114);
+        }
+        h1{
+            color: rgb(195, 224, 28);
+            font-size: 70px;
+            text-shadow: 6px 6px 6px rgb(247, 5, 5);
+        }
+
+    </style>
+</head>
+<body>
+    <center>
+        <h1>jQuery Events</h1>
+    <nav>
+        <ul>
+            <li class="menu"  id="dis">
+                <a href="#" class="hover"> Display </a>
+                <ul class="menuItem">
+                    <li>
+                       <a href="./hide.html" class="f"  id="f1a">Hide()</a>
+                    </li>
+                    <li>
+                        <a href="./show.html" class="f" id="f1b">Show()</a>
+                    </li>
+                    <li>
+                        <a href="./toggle.html" class="f" id="f1c">Toggle()</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu" id="fad">
+                <a href="#" class="hover" > Fade </a>
+                <ul class="menuItem">
+                    <li>
+                       <a href="./fadeIn.html"  class="f" id="f2a">fadeIn()</a>
+                    </li>
+                    <li>
+                        <a href="./fadeOut.html" class="f" id="f2b">fadeOut()</a>
+                    </li>
+                    <li>
+                        <a href="./fadeToggle.html" class="f" id="f2c">fadeToggle()</a>
+                    </li>
+                    <li>
+                        <a href="./fadeTo.html" class="f" id="f2d">fadeTo()</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="menu" id="slid">
+                <a href="#" class="hover"> Slide </a>
+                <ul class="menuItem">
+                    <li>
+                       <a href="./slideUp.html" class="f" id="f3a">slideIn()</a>
+                    </li>
+                    <li>
+                        <a href="./slideDown.html" class="f" id="f3b">slideOut()</a>
+                    </li>
+                    <li>
+                        <a href="./slideToggle.html" class="f" id="f3c">slideToggle()</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    <br><br><br>
+
+    <br><br><br>
+    <h2 style="margin-top: 250px;color:white;">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+Voluptatem aperiam iure exercitationem. Suscipit assumenda eveniet
+voluptatum architecto exercitationem molestias Lorem ipsum dolor sit
+amet consectetur adipisicing elit. Minima quod beatae cumque!
+    </h2>
+
+</center>
+
+
+</body>
+</html>
+

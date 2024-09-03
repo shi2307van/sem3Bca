@@ -1,0 +1,153 @@
+<html>
+<head>
+<script src="./js/jquery.js"></script>
+<title>Bio-Data</title>
+<style>
+#table1 td,#table3 td{
+padding: 5px 30px;
+}
+#table2 td{
+padding: 10px 65px;
+}
+#table1 caption{
+color: rgb(59, 37, 37);
+}
+#table3 caption{
+color: rgb(71, 33, 33);
+}
+#bio{
+font-family:cursive;
+color: rgb(78, 41, 41);
+text-align: center;
+background-image: radient-gradient(rgb(146, 125, 224),rgba(157, 198, 218, 0.925),rgb(85, 111, 184));
+}
+table{
+background-image: linear-gradient(rgb(238, 97, 219),rgba(119, 211, 211, 0.925));
+}
+</style>
+<script>
+var pinfo = `{
+"Name" : "Shivani T. Shinde",
+"Date Of Birth" : "23/07/2002",
+"Email" : "shivanishinde540@gmail.com",
+"Gender" : "Female",
+"Address" : "119-Priyanka Green Park,Bhestan,Surat.",
+"Contact" : 9023844654,
+"Marital Status" : "Single",
+"Nationality" : "Indian",
+"Languages Known" : ["English","Hindi","Gujarati","Marathi"],
+"Hobbies" : ["Listening Music","Drawing","Reading book"],
+"Profile" : "shivani.png"
+}`;
+var ainfo=`{ 
+"PG" :{
+"Qualification" : "MCA",
+"Institute" : "VNSGU",
+"Passing Year" : 2022,
+"CGPA" : 8.45
+},
+"UG" :{
+"Qualification" : "BCA",
+"Institute" : "VNSGU",
+"Passing Year" : "2019",
+"CGPA" : 8.1
+},
+"HigherSecondary" :{
+"Qualification" : "H.Sc",
+"Institute" : "GHSEB",
+"Passing Year" : "2017",
+"Percentage" : "58%"
+},
+"Secondary" :{
+"Qualification" : "S.Sc",
+"Institute" : "GHSEB",
+"Passing Year" : "2015",
+"Percentage" : "84%"
+}
+}`;
+var skinfo=`{
+"Programming Languages" : ["C","C++","Java","Python"],
+"Web Technologies" : ["JavaScript","CSS","HTML","jQuery"],
+"Databases" : ["Access","MySQL","Oracle","SQL Server"]
+}`;
+var personal=JSON.parse(pinfo);
+var qualification=JSON.parse(ainfo);
+var skill=JSON.parse(skinfo);
+var profile=personal['Profile'];
+var name=personal['Name'];
+var email=personal['Email'];
+var cno=personal['Contact'];
+$(document).ready(function(){
+$("#ppic").attr("src",profile);
+$("#name").html(`<b>${name}</b>`);
+$("#emailid").html(`<b>Email : </b> ${email}`);
+$("#conno").html(`<b>Contact No : </b> ${cno}`);
+var ptbl="<table>";
+ptbl=ptbl+"<caption><h2>Personal Information</h2></caption>";
+for(var key in personal)
+{
+   if(key!="Profile" && key!="Email" && key!="Contact" && key!="Name"){
+    ptbl=ptbl+`<tr><td><b>${key}:</b></td><td>${personal[key]}</td></tr>`;
+   }
+}
+ptbl=ptbl+`</table>`;
+$("#table1").html(ptbl);
+var atbl;
+for(var key in qualification){
+if(typeof qualification[key]=='object'){
+atbl=atbl+"<tr>";
+for(var key2 in qualification[key]){
+    atbl=atbl+`<td>${qualification[key][key2]}</td>`;
+}
+atbl=atbl+"</tr>";
+}
+}
+$("#table2").append(atbl);
+var stbl="<table>";
+stbl=stbl+"<caption><h2>Technical Skills</h2></caption>";
+for(var key in skill)
+{ 
+    stbl=stbl+`<tr><td><b>${key}:</b></td><td>${skill[key]}</td></tr>`;
+}
+stbl=stbl+`</table>`;
+$("#table3").html(stbl);
+});
+</script>
+</head>
+<body>
+<div style="width: 750px;margin: auto;">
+<h1 id="bio"><b><u>BIO-DATA</b></u></h1>
+<table align="center" style="border: 10px solid black;">
+<tr>
+<td colspan="1" align="center">
+<img src="./shivani.png" id="img" style="width:150px;height: 170px;"><br>
+<p id="name"></p>
+</td>
+<td align="right">
+<p id="emailid"></p>
+<p id="conno"></p>
+</td> 
+</tr>
+<tr align="center">
+<td colspan="2" id="table1" ></td>
+</tr> 
+<tr align="center">
+<td colspan="2">
+<table border="1" cellspacing="5" cellpadding="10" id="table2">
+<caption><h2 style="color: rgb(92, 47, 47);">Academic Profile</h2></caption>
+<tr>
+    <th>Qualification</th>
+    <th>Institute</th>
+    <th>Passing Month-Year</th>
+    <th>Percentage/CGPA</th>
+</tr>
+</table>
+</td>
+</tr>
+ <tr align="center">
+    <td colspan="2" id="table3"></td>
+</tr>
+</table>
+</div>
+</body>
+</html>

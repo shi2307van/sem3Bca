@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title> Hide Operation</title>
+        <script src="./js/jquery.js">
+
+        </script>
+        <script>
+            $(document).ready(function(){
+                $("button").click(function(){
+                    //$(".text").hide(); //class selector
+                    //$("p").hide(); //element name selector
+                    //$("#he").hide(); //id selector
+                    //$(this).hide(); // this current element show
+                    //$("p.text").hide(); //p element class text
+                    $("p:first").hide("slow");// select first p element
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <h1 id="he"> hii my name is shiavni</h1>
+        <p class="text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repudiandae, quae.</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nobis, velit.</p>
+        <button>click me</button>
+    </body>
+</html>

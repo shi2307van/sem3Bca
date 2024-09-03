@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> BOOK DETAILS </title>
+    <script src="./js/jquery.js"></script>
+    <script>
+        var b = `{
+            "title":"Python Book",
+            "ISBN NO":"01-09-923456",
+            "Author":"Shivani Shinde",
+            "Publisher":"STS",
+            "Pages":234,
+            "Price":468,
+            "Edition":4,
+            "language":"English"
+        }`;
+        var obj = JSON.parse(b);
+        var book = "<caption><h1> BOOK DETAILS</h1></caption>";
+        for(let key in obj){
+            book = book + `<tr>`
+            book = book + `<td>${key}</td><td>${obj[key]}</td>`
+            book = book + `</tr>`
+        }
+        $(document).ready(function(){
+            $("#demo").html(book);
+            $("#demo").attr("border","10");
+            $("#demo").attr("cellspacing","30");
+            $("#demo").attr("cellpadding","10");
+            $("#demo").attr("align","center");
+            $("#demo").css({"background-color":"pink","color":"black","font-weight": "bold","font-size": "25px","border":"10px solid black","text-align":"center"});
+        });
+    </script>
+</head>
+<body>
+    <table id="demo"> </table>
+</body>
+</html>

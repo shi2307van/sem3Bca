@@ -1,0 +1,163 @@
+<html>
+    <head>
+        <title>Google Account</title>
+        <script src="./js/jquery.js"></script>
+        <script>
+            $(document).ready(function(){
+                 $("#chk").click(function(){
+                        $("#btn").removeAttr("disabled");
+                });
+             });
+        </script>
+
+    </head>
+    <body>
+        <center>
+
+            <table style="width: 900px;" border="0">
+                <tr><td colspan="2" id="bl" align="center"><h1 style="color: gray;" >Create Your Google Account</h1></center></td></tr>
+                <tr>
+                <td>
+                    <table style="width: 450px; margin-top: -150px;" border="0">
+                    <tr>
+                        <td colspan="2">
+                            <h3 style="color: gray;">One Account is all you need </h3>
+                            <h5 style="color: gray;">One free account gets you into everything google.</h5>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <img src="./img/google.png" style="width:20px;">&nbsp;&nbsp;&nbsp;
+                            <img src="./img/gmial.png" style="width:20px;">&nbsp;&nbsp;&nbsp;
+                            <img src="./img/googlemap.png" style="width:20px;">&nbsp;&nbsp;&nbsp;
+                            <img src="./img/youtube.png" style="width:20px;">&nbsp;&nbsp;&nbsp;
+                            <img src="./img/drive.png" style="width:20px;">&nbsp;&nbsp;&nbsp;
+                            <img src="./img/goggle Photos.png" style="width:20px;">&nbsp;&nbsp;&nbsp;
+                            <img src="./img/playstore.png" style="width:20px;">&nbsp;&nbsp;&nbsp;
+                            <img src="./img/crome.png" style="width:20px;">&nbsp;&nbsp;&nbsp;
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><br>
+                           
+                                <h3 style="color: gray;">Take It All With You</h3>
+                            
+                                <h5 style="color: gray;">Switch Between Devices, and Pick up wherever you left off.</h5>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                                <img src="./img/computer.jfif">
+                           
+                        </td>
+                    </tr>
+                    </table>
+                </td>
+
+                <td>
+                    <table style="width: 300px; border-radius:20px;border:7px black dashed; background-color:rgb(179, 157, 38);  margin-top: -250px; padding:30px;">
+                        <tr>
+                            <td colspan="3">Name</td><br>
+                        </tr>
+                        <tr>
+                            <td colspan="2"style="width: 150px;">
+                                <input type="text" placeholder="First"style="width: 150px;">
+                            </td>
+                            <td style="width: 150px;" >
+                                <input type="text" placeholder="Last"style="width: 150px;"><br>
+                            </td>
+                        </tr>
+
+                        <tr><br>
+                                <td colspan="3">Choose Your Username</td><br>
+                        </tr>
+                        <tr>
+                            <td style="width: 400px;" colspan="3">
+                                    <input type="email" placeholder="@gamil.com" style="width: 400px;"><br>
+                            </td>
+                            </tr>
+
+                            <tr><br>
+                                <td colspan="3">Create a Password</td>
+                            </tr>
+                            <tr>
+                            <td style="width: 400px;" colspan="3">
+                                    <input type="password" style="width: 400px;"><br>
+                                </td>
+                            </tr>
+
+                            <tr><br>
+                                <td colspan="3" >Birthday</td><br>
+                            </tr>
+                            <tr>
+                                <td style="width: 150px;">
+                                    <input type="month" placeholder="Month" style="width: 150px;">
+                                </td>
+                                <td style="width: 100px;">
+                                    <input type="day" placeholder="day" style="width: 70px;">
+                                </td>
+                                <td style="width: 100px;">
+                                    <input type="year" placeholder="year" style="width: 90px;"><br>
+                                </td>
+                            </tr>
+
+                            <tr><br>
+                                <td colspan="3">Gender</td><br>
+                            </tr>
+                            <tr>
+                                <td style="width: 400px;" colspan="3">
+                                    <select style="width: 400px;">
+                                        <option disabled="disabled" selected="selected">I Am.....</option>
+                                        <option>Male</option>
+                                        <option>Female</option>
+                                    </select> <br>
+                                </td>
+                            </tr>
+
+                            <tr><br>
+                                <td colspan="3">Mobile Phone</td><br>
+                            </tr>
+                            <tr>
+                                <td style="width: 400px;" colspan="3">
+                                    <input type="number" style="width: 400px;"><br>
+                                </td>
+                            </tr>
+
+                            <tr><br>
+                                <td colspan="3">Your Current Email Address</td><br>
+                            </tr>
+                            <tr>
+                                <td style="width: 400px;"colspan="3">
+                                    <input type="email" style="width: 400px;"><br>
+                                </td>
+
+                            </tr>
+
+                            <tr><br>
+                                <td colspan="3">Location</td><br>
+                                </tr>
+                                <tr>
+                                    <td style="width: 400px;" colspan="3">
+                                    <select style="width: 400px;">
+                                        <option disabled="disabled" selected="selected">India</option>
+                                    </select><br>
+                                    </td>
+                            </tr>
+                            <tr><br>
+                                <td colspan="2"><br>
+                                    <input id="chk" colspan="3" type="checkbox" size="5" style="padding-right: 50px;">
+                                    I Agree to the google <a href="file:///D:/WD_51_63_4B/Unit%202_jQuery/terms&condition.html">Terms & condition</a> and <a href="file:///D:/WD_51_63_4B/Unit%202_jQuery/terms&condition.html">Privacy Policy</a><br>
+                                </td>
+                            </tr>
+                            <br><br><br>
+                            <tr>
+                                <td colspan="2" align="right">
+                                     <button type="submit" id="btn" disabled="disabled" style="width: 150px; height: 60px; "> <b> Registration</b> </button>
+                                </td>
+                            </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+    </body>
+</html>

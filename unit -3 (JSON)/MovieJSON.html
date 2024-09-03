@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movie JSON object</title>
+    <script src="./js/jquery.js"></script>
+    <script>
+        var m1 = `{
+            "Movie Name":"Pushpa",
+            "Actor":"Allu Arjun",
+            "Actress":"Rashmika Mandanna",
+            "Produced By":"Naveen Yerneni",
+            "Director":"Sukumar",
+            "Release Date":"17-12-2021",
+            "Box Office":"350 crores",
+            "Language":"Hindi"
+        }`
+        var m2 = `{
+            "Movie Name":"Bahubali",
+            "Actor":"Prabhas",
+            "Actress":"Anushka Shetty",
+            "Produced By":"Shobu Yarlagadda",
+            "Director":"S.S.Rajamouli",
+            "Release Date":"10-07-2015",
+            "Box Office":"650 crores",
+            "Language":"Hindi"
+        }`
+        var m3 = `{
+            "Movie Name":"Atrangi Re",
+            "Actor":"Akshay Kumar",
+            "Actress":"Sara Ali Khan",
+            "Produced By":"Himanshu Sharma",
+            "Director":"Aanand L.Rai",
+            "Release Date":"24-12-2021",
+            "Box Office":"100 crores",
+            "Language":"Hindi"
+        }`
+        var m4 = `{
+            "Movie Name":"Kabir Singh",
+            "Actor":"Shahid Kapoor",
+            "Actress":"Kiara Advani",
+            "Produced By":"Murad Khetani",
+            "Director":"Sandeep Reddy Vanga",
+            "Release Date":"21-06-2019",
+            "Box Office":"379 crores",
+            "Language":"Hindi"
+        }`
+        var m5 = `{
+            "Movie Name":"Shershaah",
+            "Actor":"Sidharth Malhotra",
+            "Actress":"Kiara Advani",
+            "Produced By":"Karan Johar",
+            "Director":"Vishnuvardhan",
+            "Release Date":"12-08-2021",
+            "Box Office":"136 crores",
+            "Language":"Hindi"
+        }`
+        var obj = JSON.parse(m1)
+        var Movie1 = "<h2>Information Of Movie One</h2>";
+        for(let key in obj){
+            Movie1 = Movie1 +  `${key} : ${obj[key]}<br>`;
+        }
+        $(document).ready(function(){
+            $("#div1").html(Movie1);
+        });
+
+        var obj = JSON.parse(m2)
+        var Movie2 = "<h2>Information Of Movie Two</h2>";
+        for(let key in obj){
+            Movie2 = Movie2 +  `${key} : ${obj[key]}<br>`;
+        }
+        $(document).ready(function(){
+            $("#div2").html(Movie2);
+        });
+
+        var obj = JSON.parse(m3)
+        var Movie3 = "<h2>Information Of Movie Three</h2>";
+        for(let key in obj){
+            Movie3 = Movie3 +  `${key} : ${obj[key]}<br>`;
+        }
+        $(document).ready(function(){
+            $("#div3").html(Movie3);
+        });
+
+        var obj = JSON.parse(m4)
+        var Movie4 = "<h2>Information Of Movie Four</h2>";
+        for(let key in obj){
+            Movie4 = Movie4 +  `${key} : ${obj[key]}<br>`;
+        }
+        $(document).ready(function(){
+            $("#div4").html(Movie4);
+        });
+
+        var obj = JSON.parse(m5)
+        var Movie5 = "<h2>Information Of Movie Five</h2>";
+        for(let key in obj){
+            Movie5 = Movie5 +  `${key} : ${obj[key]}<br>`;
+        }
+        $(document).ready(function(){
+            $("#div5").html(Movie5);
+        });
+    </script>
+    <style>
+        div{
+            background-color: rgb(233, 149, 190);
+            width: 700px;
+            text-align: center;
+            margin-left: 300px;
+            border: 6px dotted rgb(18, 18, 54);
+            margin-top:20px;
+           font-weight: bold;
+           font-size: 25px;
+           padding-bottom:25px;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="div1"> </div>
+    <div id="div2"> </div>
+    <div id="div3"> </div>
+    <div id="div4"> </div>
+    <div id="div5"> </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Mouse enter and leave events </title>
+    <script src="./js/jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#p1").mouseenter(function(){
+                alert("you enter the element with id p1");
+            });
+            $("#p1").mouseleave(function(){
+                alert(" you leave the element with id p1");
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1> Mouse enter and leave events </h1>
+    <p id="p1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nobis, culpa?</p>
+</body>
+</html>

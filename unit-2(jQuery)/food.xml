@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+
+<foodItems>
+    <italian>
+        <food>
+            <name> Pizza </name>
+            <price> 300 </price>
+        </food>
+        <food>
+            <name> pasta </name>
+            <price> 200 </price>
+        </food>
+        <food>
+            <name> French Frize </name>
+            <price> 100 </price>
+        </food>
+    </italian>
+    <southIndian>
+        <food>
+            <name> Dosa </name>
+            <price> 50 </price>
+        </food>
+         <food>
+            <name> Idaly </name>
+            <price> 90 </price>
+        </food>
+         <food>
+            <name> Uthapa </name>
+            <price> 70 </price>
+        </food>
+    </southIndian>
+    <gujarati>
+         <food>
+            <name> Khaman </name>
+            <price> 250 </price>
+        </food>
+         <food>
+            <name> Jalebi </name>
+            <price> 350 </price>
+        </food>
+         <food>
+            <name> Dhokala </name>
+            <price> 150 </price>
+        </food>
+    </gujarati>
+</foodItems>

@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<studentList>
+    <student isSpecial ="yes">
+        <firstName> Shivani </firstName>
+        <lastName> Shinde </lastName>
+        <rolllno> 58 </rolllno>
+        <GRNO> 6E1808 </GRNO>
+        <email> shivanishinde540@gmail.com</email>
+        <address> 119, Priyanka Green Park Bhestan Surat</address>
+        <contactNo> 98988615552</contactNo>
+    </student>
+    <student isSpecial ="no">
+         <firstName> Puja </firstName>
+        <lastName> Patel </lastName>
+        <rolllno> 88 </rolllno>
+        <GRNO> 6E1804 </GRNO>
+        <email> puja540@gmail.com</email>
+        <address> 234,Pandesara Surat</address>
+        <contactNo> 90988615556</contactNo>
+    </student>
+     <student isSpecial ="no">
+         <firstName> Samarth </firstName>
+        <lastName> Pawar </lastName>
+        <rolllno> 12 </rolllno>
+        <GRNO> 6E1888 </GRNO>
+        <email> samarth345@gmail.com</email>
+        <address> athavaline, Surat</address>
+        <contactNo> 98989615552</contactNo>
+    </student>
+     <student isSpecial ="yes">
+         <firstName> Nisha </firstName>
+        <lastName> Ray </lastName>
+        <rolllno> 56 </rolllno>
+        <GRNO> 6E1958 </GRNO>
+        <email> nisharay@gmail.com</email>
+        <address> 234 majuragate ,Surat</address>
+        <contactNo> 98988645552</contactNo>
+    </student>
+     <student isSpecial ="no">
+         <firstName> Kartik </firstName>
+        <lastName> Thakur </lastName>
+        <rolllno> 88 </rolllno>
+        <GRNO> 6E1508 </GRNO>
+        <email> kartik@gmail.com</email>
+        <address> Udhana, Surat</address>
+        <contactNo> 98938615552</contactNo>
+    </student>
+     <student isSpecial ="yes">
+         <firstName> Darshan </firstName>
+        <lastName> Mansik </lastName>
+        <rolllno> 18 </rolllno>
+        <GRNO> 6E1608 </GRNO>
+        <email> dharshan@gmail.com</email>
+        <address> bhestan, Surat</address>
+        <contactNo> 92988615552</contactNo>
+    </student>
+</studentList>
